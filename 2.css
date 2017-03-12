@@ -1,0 +1,98 @@
+		body {
+			background:#ddd;
+			padding:0;
+			margin:0;
+		 }
+		 h2{
+			padding:0;
+			margin:0;
+		 }
+	  /**********************navi**************************/
+		#navi,#foot {
+			background:#333;
+			width:100%;
+			height:60px;
+		}
+		#navi h1{
+			float:left;
+			margin-left:100px;
+			color:white;
+			line-height:20px;
+		}
+		#navi>ul{
+			float:right;
+		}
+		#navi li{
+			float:left;
+			width:100px;
+		}
+		#navi a{
+			color:white;
+			text-decoration:none;
+		}
+		/*************************no1******************************/
+		.no1{
+			width:93%;
+			background:#fff;
+			margin:20px auto 25px auto;
+			padding:20px 20px;
+			box-shadow:3px 3px 3px 3px #999;
+		}
+		.no1>p{
+			line-height:25px;
+		}
+		.no1>table{
+			border:1px solid #ccc;
+			padding:5px;
+			margin:10px;
+		}
+		#last td{
+			border:1px solid #ddd;
+			padding-left:8px;
+		}
+		#last>table{
+			border:1px solid #ddd;
+			border-collapse:collapse;
+			width:100%;
+			margin:auto;
+			line-height:25px;
+		}
+		#last>table>thead {
+			background:#333;
+			color:white;
+
+		}
+		#last>table>tfoot{
+			background:#bbb;
+		}	
+		/*************************注册**************************/
+		#zhuce h3{
+			border-left:5px solid #ddd;
+			padding:10px 10px;
+		}
+		.item1{
+			float:left;
+			text-align:right;
+			width:30%;
+			display:block;
+			height:42px;
+			margin-right:20px;
+			margin-top:3px;
+
+		}
+		.item2{
+			display:block;
+			
+		}
+		#zhuce p {
+			color:#333;
+			float:left;
+		}
+		
+	/***************************foot***************************/
+
+		#foot {
+			text-align:center;
+			
+			color:white;
+		}
