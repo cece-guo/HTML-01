@@ -4,59 +4,119 @@
   <title>任务三：三栏式布局</title>
   <meta charset="utf-8" />
   <style>
-	body {
+	* {
 		margin:0;
-		padding:20px;
+		padding:0;
 	}
-	#d0 {
-		background:#eee;
-		height:410px;
+	#box2 {
 		padding:20px;
+		margin:20px;
 		border:1px solid #999;
+		background:#eee;
+		position:relative;/**********父元素定位为relative，这样子元素才能定位***************/
+		min-height:430px;/**********让box能够包含全部三栏************/
 	}
-	#d1,#d2,#d3 {
-		float:left;
-		border:1px solid #333;
+	#left2 {
+		width:158px;
+		border:1px solid #999;
+		background:#fff;
 		padding:20px;
-		background:white;
+		position:absolute;
 	}
-	#d1 {
-		width:160px;
-		vertical-align:top
+	#left2 p {
+		position:absolute;
+		top:20px;
+		right:20px;
 	}
-	#d2 {
-		width:66%;
-		margin:0 20px;
+	#center2 {
+		border:1px solid #999;
+		background:#fff;
+		padding:20px;
+		margin-left:220px;
+		margin-right:160px;
 	}
-	#d3 {
+	#right2 {
+		border:1px solid #999;
+		background:#fff;
+		padding:20px;
+		position:absolute;
 		width:80px;
+		top:20px;
+		right:20px;
 	}
 	img{
 		width:80px;
 		height:80px;
-		padding-bottom:10px;
-
+	}
+		#box {
+		margin:20px;
+		padding:20px;
+		background:#eee;
+		border:1px solid #999;
+		overflow:auto;
+	}
+	#left {
+		width:158px;
+		border:1px solid #999;
+		background:#fff;
+		padding:20px;
+		float:left;
+	}
+	#left P{
+		float:right;
+	}
+	#center {
+		border:1px solid #999;
+		background:#fff;
+		padding:20px;
+		margin-left:220px;
+		margin-right:150px;
+	}
+	#right {
+		border:1px solid #999;
+		background:#fff;
+		padding:20px;
+		width:80px;
+		float:right;
 	}
   </style>
  </head>
 
  <body>
-	<div id="d0">
-		<div id="d1">
+	<div id="box2">
+		<div id="left2">
 			<img src="1.jpg">
-			<span>老友记</span>
+			<p>老友记</p>
 		</div>
-		<div id="d2">
-		<h3>老友记</h3>
-		<p>美国 236集（10季）<br/>
-		&nbsp;&nbsp;《老友记》是一部美国电视情景喜剧，由大卫·克莱恩和玛塔·卡芙曼创作，珍妮佛·安妮斯顿、柯特妮·考克斯、丽莎·库卓、马特·勒布朗、马修·派瑞和大卫·史威默主演。故事以生活在纽约曼哈顿的六个老友为中心，描述他们携手走过的十年风雨历程。全剧共10季236集，于1994年9月22日至2004年5月6日在全国广播公司（NBC）播映。
-		《老友记》是史上最受欢迎的电视剧之一，全十季收视均列年度前十[1]  ，至今仍在全球各地热播和重映[2]  。《老友记》亦广受好评，获得第54届艾美奖喜剧类最佳剧集奖[3]  ，提名黄金时段艾美奖累计62次。</p>
+		<div id="center2">
+			<h3>老友记</h3>
+			美国 236集（10季）<br/>
+			&nbsp;&nbsp;《老友记》是一部美国电视情景喜剧，由大卫·克莱恩和玛塔·卡芙曼创作，珍妮佛·安妮斯顿、柯特妮·考克斯、丽莎·库卓、马特·勒布朗、马修·派瑞和大卫·史威默主演。故事以生活在纽约曼哈顿的六个老友为中心，描述他们携手走过的十年风雨历程。全剧共10季236集，于1994年9月22日至2004年5月6日在全国广播公司（NBC）播映。
+			《老友记》是史上最受欢迎的电视剧之一，全十季收视均列年度前十[1]  ，至今仍在全球各地热播和重映[2]  。《老友记》亦广受好评，获得第54届艾美奖喜剧类最佳剧集奖[3]  ，提名黄金时段艾美奖累计62次。
 		</div>
-		<div id="d3">
+		<div id="right2">
 			<img src="1.jpg">
 			<img src="1.jpg">
 			<img src="1.jpg">
 			<img src="1.jpg">
+		</div>
+	</div>
+	<div id="box">
+		<div id="left">
+			<img src="1.jpg">
+			<p>老友记</p>
+		</div>
+		<div id="right">
+			<img src="1.jpg">
+			<img src="1.jpg">
+			<img src="1.jpg">
+			<img src="1.jpg">
+		</div>
+		<div id="center">
+			<h3>老友记</h3>
+			美国 236集（10季）<br/>
+			&nbsp;&nbsp;《老友记》是一部美国电视情景喜剧，由大卫·克莱恩和玛塔·卡芙曼创作，珍妮佛·安妮斯顿、柯特妮·考克斯、丽莎·库卓、马特·勒布朗、马修·派瑞和大卫·史威默主演。故事以生活在纽约曼哈顿的六个老友为中心，描述他们携手走过的十年风雨历程。全剧共10季236集，于1994年9月22日至2004年5月6日在全国广播公司（NBC）播映。
+			《老友记》是史上最受欢迎的电视剧之一，全十季收视均列年度前十[1]  ，至今仍在全球各地热播和重映[2]  。《老友记》亦广受好评，获得第54届艾美奖喜剧类最佳剧集奖[3]  ，提名黄金时段艾美奖累计62次。
 		</div>
 	</div>
  </body>
