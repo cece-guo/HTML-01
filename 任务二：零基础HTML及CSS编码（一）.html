@@ -3,8 +3,8 @@
  <head>
   <title>任务二：零基础HTML及CSS编码（一）</title>
   <meta charset="utf-8" />
-  <style>
-			body {
+	<style>
+		body {
 			background:#ddd;
 			padding:0;
 			margin:0;
@@ -76,33 +76,43 @@
 			border-left:5px solid #ddd;
 			padding:10px 10px;
 		}
-		.item1{
-			float:left;
-			text-align:right;
-			width:30%;
-			display:block;
-			height:42px;
+		#zhuce label {
+			display: inline-block;
+			width: 400px;
+			text-align: right;
+			font-size: 15px;
 			margin-right:20px;
-			margin-top:3px;
-
 		}
-		.item2{
-			display:block;
-			
+		#zhuce .tips{
+			display:inline-block;
+			padding-left:430px;
+			margin:0;
+			color:#999;
+			font-size:15px;
 		}
-		#zhuce p {
-			color:#333;
-			float:left;
+		#zhuce textarea {
+			width:700px;
+			height:100px;
+			vertical-align:top/*********让个人描述显示到框的上部分***********/
 		}
-		
+		#submit {
+			width:100%;
+			height:30px;
+			margin:0 auto;
+			background-color:blue;
+			color:white;
+			border:none;
+			border-radius:5px;
+		}
 	/***************************foot***************************/
 
 		#foot {
 			text-align:center;
-			
+			line-height:60px;
 			color:white;
 		}
   </style>
+  
  </head>
 
  <body>
@@ -236,26 +246,39 @@
 	<div class="no1" id="zhuce">
 		<h3>这里以后是一个侧栏，这是侧栏的标题</h3>
 		<form>
-			<label class="item1">请输入邮箱地址</label>
-			<input type="text" placeholder="这是一个文本输入框" class="item2" />
-			<p>邮箱地址请按要求格式输入</p>
-			<div>
-			<label class="item1">请输入密码</label>
-			<input type="text" placeholder="这是一个文本输入框" class="item2" /> 
-			</div>
-			<label class="item1">请重复输入密码</label>
-			<input type="text" placeholder="这是一个文本输入框" class="item2" />
-			<p>密码请为6-16位英文数字</p>
-			<label class="item1">性别</label>
-			<input type="radio" name="sex" value="man">男<input type="radio" name="sex" value="woman">女 
-			<label class="item1">城市</label>
-			<select>
-			<option>北京</option><option>天津</option><option>杭州</option><option>上海</option></select>  
-			<label class="item1">爱好</label>
-			<input type="checkbox" name="hobby" value="sport"/>运动<input type="checkbox" name="hobby" value="science"/>科学<input type="checkbox" name="hobby" value="art"/>艺术
-			<label class="item1">个人描述</label>
-			<textarea class="item2" ></textarea>
-			<input type="button" value="确认提交"/>
+			<p>
+				<label class="item1">请输入邮箱地址</label>
+				<input type="text" placeholder="这是一个文本输入框"	class="item2" />
+			</p>
+			<p class="tips">邮箱地址请按要求格式输入</p>
+			<p>
+				<label>请输入密码</label>
+				<input type="password" placeholder="这是一个密码输入框" class="item2" /> 
+			</p>
+			<p>
+				<label>请重复输入密码</label>
+				<input type="password" placeholder="这是一个密码输入框" class="item2" /> 
+			</p>
+			<p class="tips">密码请为6-16位英文数字</p>
+			<p>
+				<label class="item1">性别</label>
+				<input type="radio" name="sex" value="man" checked>男<input type="radio" name="sex" value="woman">女 
+			</p>
+			<p>
+				<label class="item1">城市</label>
+				<select>
+				<option>北京</option><option>天津</option><option>杭州</option><option>上海</option></select>  
+			</p>
+			<p>
+				<label class="item1">爱好</label>
+				<input type="checkbox" name="hobby" value="sport"/>运动<input type="checkbox" name="hobby" value="science"/>科学<input type="checkbox" name="hobby" value="art"/>艺术
+			</p>
+			<p>		
+				<label class="item1">个人描述</label>
+				<textarea></textarea>
+			</p>
+			
+			<input type="button" value="确认提交" id="submit"/>
 		</form>
 
 	</div>
