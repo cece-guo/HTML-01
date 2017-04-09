@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>任务六：通过HTML及CSS模拟报纸排版</title>
+  <meta charset="utf-8" />
+	<style>
+		* {
+			padding:0;
+			margin:0;
+		}
+		#box {
+			position:relative;
+			width:980px;
+			height:1386px;
+			margin:0 auto;
+			}
+		/**************************header部分*******************************/
+		#header {
+			width:892px;
+			border-bottom:2px solid #938e8c;
+			margin:0 auto;
+			overflow:hidden;
+		}
+		#header-left {
+			width:110px;
+			height:61px;
+			background:#d45d5c;
+			color:#fff;
+			font-family:"Microsoft YaHei";
+			font-size:12px;
+			line-height:100px;
+			text-align:center;
+			float:left;
+		}
+		#header p {
+			float:right;
+			color:#d45d5c;
+			font-family:"Microsoft YaHei";
+			font-size:12px;
+			padding-top:43px;
+		}
+		/*************************content部分********************************/
+		#content {
+			position:relative;
+			margin:0 44px;
+			margin-top:20px;
+		}
+
+		/*****************content1部分*******************/
+		#content1 {
+			width:641px;
+			height:301px;
+			background:url(1.jpg) no-repeat;
+			position:absolute;
+
+		}
+		#content1-1,#content1-2 {
+			width:191px;
+			height:301px;
+			background:green;
+			opacity:0.4;
+			filter:"alpha(opacity=40)";
+			-ms-filter:"alpha(opacity=40)";  /* 旧版IE */
+		}
+		#content1-1 {
+			float:left;
+		}
+		#content1-2 {
+			float:right;
+			background:red;
+		}
+
+		/*****************content2部分*******************/
+
+		#content2 {
+			width:203px;
+			height:301px;
+			border-top:2px solid #cc8091;
+			position:absolute;
+			right:0;
+			font-family:"Microsoft YaHei";
+		}
+		#p1	 {
+			font-size:20px;
+			color:#000;
+			text-decoration:underline;
+			line-height:40px;
+		}
+		#p2 {
+			font-size:12px;
+			color:#676767;
+			line-height:10px;
+			font-family:"regular"
+		}
+		#p3 {
+			font-size:116px;
+			color:#75b86b;
+			font-style:italic;
+		}
+		#p4-1 {
+			font-size:55px;
+			color:#cc8091;
+			display:block;
+			float:left;
+		}
+		#p4-2 {
+			font-size:21px;
+			color:#cc8091;
+			display:block;
+			float:left;
+		}
+		#p4-3 {
+			font-size:12px;
+			color:#000;
+		}
+
+		/*****************content3部分*******************/
+		#content3 {
+			position:relative;
+			top:340px;
+			height:200px;
+			font-family:"Microsoft YaHei";
+		}
+		.c31 {
+			width:180px;
+			float:left;
+			margin-right:30px;
+		}
+		.c3-head {
+			font-size:16px;
+			font-weight:bold;
+			text-decoration:underline;
+			line-height:35px;
+		}
+		.c3-body {
+			font-size:12px;
+			line-height:16px;
+			font-family:"SimSu"
+			color:#231815;
+			opacity:0.7;
+		}
+		#c33 {
+			line-height:16px;
+			font-size:12px;
+			
+		}
+		#c33>span {
+			color:#cd4a48;
+			opacity:0.7;
+			font-style:italic;
+		}
+
+		/*****************content4部分*******************//***********************首字母放大以及文字环绕图片未实现**************************/
+		#content4 {
+			position:absolute;
+			top:520px;
+			width:450px;
+		}
+		.cnt41 {
+			font-size:42px;
+			color:#11456B;
+			font-family:"SimHei";
+			font-weight:bold;
+			padding-top:16px;
+			margin:10px;
+		}
+		.ctn42 {
+			font-size:33px;
+			color:#11456b;
+			font-family:"SimHei";
+			font-weight:bold;
+			margin:10px;
+		}
+		.ctn43 {
+			margin:10px;
+			text-indent:2em;
+			font-size:12px;
+			color:#767777;
+			font-family:"SimSun";
+			line-height:160%;/***************将其行间距设置成16****************/
+		}
+		.ctn44 { /*********设置图片样式***********/
+			width:160px;
+			float:right;/************图片浮动在右面,但是案例里面图片是被字环绕的，还没有实现************/
+			margin-top:50px;
+			padding-right:20px;
+		}
+
+		/*****************content5部分*******************/
+		#content5 {
+			position:absolute;
+			top:540px;
+			right:5px;
+			width:440px;
+			margin-left:30px;
+		}
+		#ctn51>img {
+			width:458px;
+			height:275px;
+		}
+		#ctn511 {
+			background:rgba(0,0,0,.5);/***********使用css3中的新特性，rgba属性可以设置其背景成透明，而上面的字体不透明，而不是使用opaticy*******************************/
+			width:438px;
+			height:61px;
+			position:absolute;
+			bottom:3px;
+			padding-left:20px;
+			
+		}
+		#ctn5111 {
+			margin-left:20px;
+			padding-left:10px;
+			border-left:3px solid #72b16a;
+			height:44px;
+			margin-top:8px;
+			color:#ffffff;
+			font-size:26px;
+			font-family:"Microsoft YaHei"
+		}
+		#ctn5111>span {
+			font-size:12px;
+			color:#72b16a;
+			font-style:Italic;
+			padding-left:20px;
+		}	
+
+		/*****************content6部分*******************/
+		#content6 {
+			position:absolute;
+			top:830px;
+			right:-14px;
+			width:459px;
+			height:318px;
+			background:rgb(238,238,214);
+		}
+		#ctn61 {
+			font-family:"SimSun";
+			color:#5a5b5b;
+			font-size:16px;
+			line-height:36px;
+			padding:20px 0 0 30px;
+		}
+		#ctn62 {
+			width:260px;
+			height:160px;
+			background:rgb(213,93,92);
+			position:absolute;
+			bottom:0;
+			left:0;
+
+		}
+		#ctn621	{
+			color:#fff;
+			font-size:110px;
+			font-family:"Microsoft YaHei";
+			position:absolute;
+			left:10px;
+			padding-top:10px;
+		}
+		#ctn622 {
+			position:absolute;
+			right:10px;
+			width:150px;
+			height:86px;
+			margin-top:40px;
+			padding-left:10px;
+			border-left:2px solid #fff;
+		}
+		.ctn6221 {
+			font-size:21px;
+			color:#fff;
+			font-family:"SimHei";
+			font-style:Italic;
+			line-height:24px
+		}
+		.ctn6222 {
+			font-size:12px;
+			color:#fff;
+			font-family:"SimHei";
+			line-height:18px;
+		}
+
+		#ctn63 {
+			position:absolute;
+			right:0;
+			bottom:0;
+			width:180px;
+			font-size:14px;
+			color:#5a5b5b;
+			font-family:"SimHei";
+			font-style:Italic;
+			line-height:16px;
+		}
+		#ctn63>span {
+			font-size:72px;
+			color:#d45d5c;
+			font-family:"SimHei"
+		}
+
+		/*******************************Footer部分************************************/
+		#footer {
+			position:absolute;
+			bottom:40px;
+			right:44px;	
+			border-top:1px solid #938e8c;
+			width:892px;
+			margin:0 auto;
+			text-align:right;
+			color:#d45d5c;
+			font-size:12px;
+			font-family:"SimHei"
+		}
+  </style>
+   <link rel="stylesheet" type="text/css" href="6.css" />
+ </head>
+
+ <body>
+	<div id="box">
+		<div id="header">
+			<div id="header-left">ife.baidu.com</div>
+			<p>2016.03</p>
+		</div>
+		<div id="content">
+			<div id="content1">
+				<div id="content1-1"></div >
+				<div id="content1-2"></div >
+			</div>
+			<div id="content2">
+				<p id="p1"><span>A</span>BOUT<br/> <span>T</span>ECHNOLOGY</p>
+				<p id="p2">When you are old and grey and full of sleep</p>
+				<p id="p3">700</p>
+				<span id="p4-1">3.2</span><span id="p4-2">css<br/><span id="p4-3">csssscscscsc</span></span>
+			</div>
+			<div id="content3">
+				<div class="c31">
+					<p class="c3-head" style="color:#418c59">ONE</p>
+					<p class="c3-body">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+				</div>
+				<div class="c31">
+					<p class="c3-head" style="color:#d2994f">TWO</p>
+					<p class="c3-body">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+				</div>
+				<div class="c31">
+					<p class="c3-head" style="color:#cc7680">THREE</p>
+					<p class="c3-body">
+						啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<br/><br/><br/>
+						<p id="c33"> AAA----------<span>20%</span><br/>
+							BBB----------<span>40%</span><br/>
+							CCC----------<span>40%</span>
+						</p>
+					</p>
+				</div>
+			</div>
+			<div id="content4">
+				<p class="cnt41">THE TECHNOLOGY OF FRONT</p>
+				<p class="ctn42">前端技术领域</p>
+				<hr style="border:2px solid; width:415px;">
+				<img src="1.jpg" class="ctn44">
+				<div class="ctn43"><p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p><p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p></div>
+			</div>
+			<div id="content5">
+				<div id="ctn51"><img src="1.jpg">
+					<div id="ctn511">
+						<div id="ctn5111">前端技术<span>前端技术前端技术</span></div>
+					</div>
+				</div>
+			</div>
+			<div id="content6">
+				<div id="ctn61">
+						<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊..............<span>啊啊</span></p>
+						<p>啊啊啊啊啊啊啊啊啊........................<span>啊啊啊</span></p>
+						<p>啊啊啊啊啊啊啊啊啊啊啊啊啊..................<span>啊啊</span></p>
+				</div>
+				<div id="ctn62">
+					<div id="ctn621">0</div>
+					<div id="ctn622">
+						<p class="ctn6221">ONE TWO THREE FOUR FIVE</p>
+						<p class="ctn6222">aaaaaaaaaa aaaa aaaaaa aaaaa aaaaaaa</p>
+					</div>
+				</div>
+				<div id="ctn63"><span>“</span>aaaa a a aaaaaaaaaaaa a aaaaaaaaaa a aaaaaaaaaa a aaaaaaaa aaaaaaaaa aaa a<span>”</span></div>
+			</div>
+		</div>
+		<div id="footer">ife.baidu.com</div>
+	</div>
+ </body>
+</html>
